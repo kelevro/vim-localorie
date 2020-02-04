@@ -133,7 +133,7 @@ function! s:display(key, translations) abort
     redraw
     echo "No translations for '".a:key."'."
   else
-    execute (qf ? 'copen' : 'lopen')
+    execute (qf ? 'copen 3' : 'lopen')
     let w:quickfix_title = a:key
     if !s:options.switch
       wincmd p
